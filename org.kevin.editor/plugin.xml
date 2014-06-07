@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.kevin.editor.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="org.kevin.editor.Perspective"
+            id="org.kevin.editor.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="editor.CustomEditor"
+            default="false"
+            id="org.kevin.editor.editor"
+            name="MyEditor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="editor.CustomView"
+            id="org.kevin.editor.view"
+            name="MyView"
+            restorable="true">
+      </view>
+   </extension>
+
+</plugin>
