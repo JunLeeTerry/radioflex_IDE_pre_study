@@ -27,9 +27,10 @@ public class CustomView extends ViewPart {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				IWorkspaceRoot myWorkspaceRoot = ResourcesPlugin.getWorkspace().getRoot();
-				IProject myProject = myWorkspaceRoot.getProject("qzw");
-				IFile myfile = myProject.getFile("editor");
-				EditorInput input = new EditorInput(myfile);
+				IProject myProject = myWorkspaceRoot.getProject("com.trantect.editorXML");
+				System.out.println(myProject);
+				IFile myfile = myProject.getFile("plugin.xml");
+				CustomEditorInput input = new CustomEditorInput(myfile);
 			
 					try {
 						PlatformUI.getWorkbench().getActiveWorkbenchWindow()

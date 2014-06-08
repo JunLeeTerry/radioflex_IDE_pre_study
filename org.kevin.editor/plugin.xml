@@ -23,7 +23,7 @@
          point="org.eclipse.ui.editors">
       <editor
             class="editor.CustomEditor"
-            default="false"
+            default="true"
             id="org.kevin.editor.editor"
             name="MyEditor">
       </editor>
